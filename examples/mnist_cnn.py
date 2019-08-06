@@ -12,10 +12,11 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout, Flatten
 from keras.layers import Conv2D, MaxPooling2D
 from keras import backend as K
+import os
 
 batch_size = 128
 num_classes = 10
-epochs = 12
+epochs = os.environ.get('epoch', 14)
 
 # input image dimensions
 img_rows, img_cols = 28, 28
