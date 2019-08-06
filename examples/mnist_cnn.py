@@ -16,7 +16,8 @@ import os
 
 batch_size = 128
 num_classes = 10
-epochs = os.environ.get('epoch', 14)
+epochs = int(os.environ.get('epoch', 14))
+print("Total iteration {}".format(str(epochs)))
 
 # input image dimensions
 img_rows, img_cols = 28, 28
